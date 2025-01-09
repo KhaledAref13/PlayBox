@@ -1,5 +1,4 @@
-const queryParams = new URLSearchParams(window.location.search);
-const id = queryParams.get("id");
+const id = JSON.parse(localStorage.getItem("id"));
 const video = document.querySelector(".video");
 
 loading(video);

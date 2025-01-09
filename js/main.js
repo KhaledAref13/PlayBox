@@ -49,7 +49,8 @@ const resultsElements = (sectionTitle, data) => {
     const videoBox = element("div", "box");
     videoBox.addEventListener("click", (event) => {
       event.preventDefault();
-      navigateWithData("../html/video.html", { id: e.id.videoId || e.id });
+      localStorage.setItem("id", JSON.stringify(e.id.videoId || e.id));
+      navigate("../html/video.html");
     });
     videosContainer.append(videoBox);
     const videoImage = element("img");
@@ -70,7 +71,6 @@ const resultsElements = (sectionTitle, data) => {
   });
 };
 
-function navigateWithData(pageUrl, data) {
-  const params = new URLSearchParams(data).toString();
-  window.location.href = `${pageUrl}?${params}`;
+function navigate(pageUrl) {
+  window.location.href = `${pageUrl}`;
 }
