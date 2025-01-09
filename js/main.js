@@ -50,7 +50,7 @@ const resultsElements = (sectionTitle, data) => {
     videoBox.addEventListener("click", (event) => {
       event.preventDefault();
       localStorage.setItem("id", JSON.stringify(e.id.videoId || e.id));
-      navigate("../html/video.html");
+      navigate("../video.html");
     });
     videosContainer.append(videoBox);
     const videoImage = element("img");
