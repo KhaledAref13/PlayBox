@@ -50,7 +50,7 @@ const resultsElements = (sectionTitle, data) => {
     videoBox.addEventListener("click", (event) => {
       event.preventDefault();
       localStorage.setItem("id", JSON.stringify(e.id.videoId || e.id));
-      navigate("../video.html");
+      window.location.href = `https://khaledaref13.github.io/PlayBox/video.html`;
     });
     videosContainer.append(videoBox);
     const videoImage = element("img");
@@ -70,7 +70,3 @@ const resultsElements = (sectionTitle, data) => {
     results.append(videosContainer);
   });
 };
-
-function navigate(pageUrl) {
-  window.location.href = `${pageUrl}`;
-}
