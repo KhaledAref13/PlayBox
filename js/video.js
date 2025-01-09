@@ -1,5 +1,6 @@
 const id = JSON.parse(localStorage.getItem("id"));
 const video = document.querySelector(".video");
+console.log(window.location.href);
 
 loading(video);
 
